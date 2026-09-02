@@ -5,6 +5,19 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+    inputs:
+        environment:
+            description: "Select Environment"
+            required: true
+            type: choice
+            options:
+                - dev
+                - qa 
+                - prod
+                - staging
+                
+
 jobs:
   build:
     runs-on: ubuntu-latest
