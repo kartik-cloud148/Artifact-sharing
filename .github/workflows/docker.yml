@@ -71,6 +71,10 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
 
+
+    environment:
+        name: ${{ inputs.environment }}
+
     permissions:
         packages: read
 
