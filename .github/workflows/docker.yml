@@ -85,6 +85,10 @@ jobs:
         - name: Show Selected Environment
           run: |
             echo "Selected Environment: ${{ env.DEPLOY_ENV }}"
+
+        - name: Show environment variable
+          run: |
+            echo "Message from environment: ${{ vars.APP_MESSAGE }}"
         
         - name: Login to GHCR
           uses: docker/login-action@v3
