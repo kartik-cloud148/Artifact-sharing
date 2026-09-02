@@ -73,7 +73,7 @@ jobs:
 
         - name: Pull Docker Image
           run: |
-            docker pull ghcr.io/${{ github.repostory_owner  }}/artifact-sharing:latest
+            docker pull ghcr.io/${{ github.repository_owner }}/artifact-sharing:latest
 
         - name: deploy Docker Image
           run: |
