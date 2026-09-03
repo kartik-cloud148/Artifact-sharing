@@ -39,11 +39,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/artifact-sharing:latest:2 .
+          docker build -t ghcr.io/${{ github.repository_owner }}/artifact-sharing:2 .
 
       - name: Push Docker image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/artifact-sharing:latest:2
+          docker push ghcr.io/${{ github.repository_owner }}/artifact-sharing:2
 
   test:
     needs: build
